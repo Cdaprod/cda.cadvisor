@@ -2,7 +2,10 @@ version: '3.7'
 
 services:
   cadvisor:
-    build: .
+    build:
+      context: .
+      args:
+        - TARGETARCH=arm64
     container_name: "${HOSTNAME}_cadvisor"
     ports:
       - '8080:8080'
@@ -13,8 +16,4 @@ services:
       - /var/lib/docker/:/var/lib/docker:ro
     environment:
       - HOSTNAME=${HOSTNAME}
-    entrypoint: ["/entrypoint.sh"]
     restart: unless-stopped
-
-volumes:
-  cadvisor_data:
