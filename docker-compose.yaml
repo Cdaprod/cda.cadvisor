@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   cadvisor:
-    image: gcr.io/cadvisor/cadvisor:v0.47.0
+    build: .
     container_name: ${HOSTNAME}_cadvisor
     ports:
       - '8080:8080'
@@ -13,7 +13,6 @@ services:
       - /var/lib/docker/:/var/lib/docker:ro
     environment:
       - HOSTNAME=${HOSTNAME}
-    entrypoint: ["/entrypoint.sh"]
     restart: unless-stopped
 
 volumes:
