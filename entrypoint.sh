@@ -1,10 +1,7 @@
 #!/bin/sh
-
-# Capture hostname
+echo "Starting entrypoint script"
 HOSTNAME=$(hostname)
-
-# Export the captured hostname
+echo "Hostname: $HOSTNAME"
 export HOSTNAME
-
-# Execute the original entrypoint of cAdvisor
+echo "Executing cAdvisor"
 exec /usr/bin/cadvisor "$@"
