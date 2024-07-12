@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Capture hostname and other important information
+# Capture hostname
 HOSTNAME=$(hostname)
 
-# Export the captured information as environment variables
+# Export the captured hostname
 export HOSTNAME
 
 # Execute the original entrypoint of cAdvisor

@@ -13,16 +13,12 @@ cd cda.cadvisor
 
 ## Running cAdvisor
 
-Before starting cAdvisor, ensure the `.env` file has the correct hostname:
+Before starting cAdvisor, run the following command to start cAdvisor with the machines `HOSTNAME`:
 
 ```bash
-echo "HOSTNAME=$(hostname)" > .env
-```
-
-Then run the following command to start cAdvisor:
-
-```bash
+export HOSTNAME=$(hostname)
 docker-compose up -d
+
 ```
 
 ## Accessing cAdvisor

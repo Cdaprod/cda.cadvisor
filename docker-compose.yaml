@@ -12,7 +12,7 @@ services:
       - /sys:/sys:ro
       - /var/lib/docker/:/var/lib/docker:ro
     environment:
-      - HOSTNAME=${HOSTNAME:-${HOST}}
+      - HOSTNAME=${HOSTNAME}
     entrypoint: ["/entrypoint.sh"]
     restart: unless-stopped
 
