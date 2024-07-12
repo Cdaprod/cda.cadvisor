@@ -1,4 +1,4 @@
-FROM gcr.io/cadvisor/cadvisor:v0.47.0
+FROM gcr.io/cadvisor/cadvisor:latest
 
 # Copy the entrypoint script
 COPY entrypoint.sh /entrypoint.sh
