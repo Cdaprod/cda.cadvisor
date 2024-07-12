@@ -4,4 +4,4 @@ HOSTNAME=$(hostname)
 echo "Hostname: $HOSTNAME"
 export HOSTNAME
 echo "Executing cAdvisor"
-exec /usr/bin/cadvisor "$@"
+exec /usr/local/bin/cadvisor "$@"
